@@ -1,0 +1,105 @@
+{
+  "name": "cavalo-sound-effect",
+  "displayName": "Cavalo Sound",
+  "description": "CAVALO! Toca o som do meme sempre que seu código falha, o terminal chora ou o debug morre. UUUUI!",
+  "version": "1.0.0",
+  "publisher": "Godrix",
+  "license": "MIT",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other",
+    "Education"
+  ],
+  "keywords": [
+    "cavalo",
+    "rodrigo faro",
+    "vai dar namoro",
+    "dança gatinho",
+    "error sound",
+    "fail sound",
+    "meme",
+    "funny"
+  ],
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Cavalo Sound (Faro)",
+      "properties": {
+        "cavaloSound.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Ativar ou desativar o som do CAVALO."
+        },
+        "cavaloSound.playOnDiagnosticsError": {
+          "type": "boolean",
+          "default": true,
+          "description": "Toca 'CAVALO' quando aparecerem erros (sublinhados vermelhos) no código."
+        },
+        "cavaloSound.playOnTerminalCommandFailure": {
+          "type": "boolean",
+          "default": true,
+          "description": "Toca 'ERRRRROU' ou 'CAVALO' quando um comando no terminal falhar (requer shell integration)."
+        },
+        "cavaloSound.playOnTaskFailure": {
+          "type": "boolean",
+          "default": true,
+          "description": "Toca o som quando uma Task do VS Code falha."
+        },
+        "cavaloSound.playOnDebugFailure": {
+          "type": "boolean",
+          "default": true,
+          "description": "Toca o som quando a sessão de Debug fecha com erro. ELE GOSTA!"
+        },
+        "cavaloSound.useRandom": {
+          "type": "boolean",
+          "default": true,
+          "description": "Em erros: toca cavalo.mp3; a cada 10 execuções toca um de aii-mamae/aaaai. Se desligado, usa sempre o som em 'soundFile'."
+        },
+        "cavaloSound.soundFile": {
+          "type": "string",
+          "default": "cavalo.mp3",
+          "enum": ["cavalo.mp3", "aaaai.mp3", "aii-mamae.mp3"],
+          "enumDescriptions": ["CAVALO! (principal)", "Aaaai!", "Aii, mamãe!"],
+          "description": "Som usado em erros quando 'useRandom' está desligado. O comando de teste sempre usa ele-gosta.mp3."
+        },
+        "cavaloSound.cooldownMs": {
+          "type": "number",
+          "default": 2000,
+          "minimum": 0,
+          "maximum": 30000,
+          "description": "Intervalo em milissegundos para evitar spam de CAVALO no seu ouvido."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "cavaloSound.testSound",
+        "title": "Cavalo: Testar Som (ELE GOSTA!)"
+      },
+      {
+        "command": "cavaloSound.resetErrorCount",
+        "title": "Cavalo: Resetar Contador de Erros"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.93.0",
+    "typescript": "^5.3.0"
+  }
+}

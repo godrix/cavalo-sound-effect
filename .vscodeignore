@@ -1,0 +1,33 @@
+.vscode/**
+.vscode-test/**
+out/test/**
+src/**
+.gitignore
+*.vsix
+**/.eslintrc.json
+**/*.map
+**/*.ts
+!out/**/*.js
+tsconfig.json
+node_modules/**
+
+*.md
+# Exceto estes específicos
+!README.md
+!LICENSE
+
+# Git files
+.git/**
+.github/**
+
+# Cursor folder
+.cursor/**
+
+# Misc
+.yarnrc
+vsc-extension-quickstart.md
+.DS_Store
+*.log
+llms.txt
+README.md
+*.code-workspace

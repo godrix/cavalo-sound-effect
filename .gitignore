@@ -1,0 +1,15 @@
+out
+node_modules
+.vscode-test/
+*.vsix
+.DS_Store
+*.log
+
+.cursor
+
+# Ignorar todos os arquivos .md
+*.md
+# Exceto estes específicos
+!README.md
+!CHANGELOG.md
+!LICENSE
