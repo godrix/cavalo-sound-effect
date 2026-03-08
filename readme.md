@@ -76,7 +76,8 @@ Abra as **Settings** do VS Code e pesquise por `cavaloSound`:
 
 | Comando | Descrição |
 | --- | --- |
-| **Cavalo: Testar Som** | Dispara o som manualmente |
+| **Cavalo: Testar Som (ELE GOSTA!)** | Dispara o som manualmente |
+| **Cavalo: Ativar ou desativar extensão** | Liga/desliga a extensão sem desinstalar (toggle) |
 | **Cavalo: Resetar Contador de Erros** | Reseta a contagem interna de erros para zero |
 
 ## Como Funciona

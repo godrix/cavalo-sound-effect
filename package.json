@@ -2,7 +2,7 @@
   "name": "cavalo-sound-effect",
   "displayName": "Cavalo Sound",
   "description": "CAVALO! Toca o som do meme sempre que seu código falha, o terminal chora ou o debug morre. UUUUI!",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "Godrix",
   "license": "MIT",
   "repository": {
@@ -93,6 +93,10 @@
       {
         "command": "cavaloSound.testSound",
         "title": "Cavalo: Testar Som (ELE GOSTA!)"
+      },
+      {
+        "command": "cavaloSound.toggleEnabled",
+        "title": "Cavalo: Ativar ou desativar extensão"
       },
       {
         "command": "cavaloSound.resetErrorCount",

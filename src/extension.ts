@@ -420,6 +420,13 @@ export function activate(context: vscode.ExtensionContext): void {
       vscode.window.showInformationMessage("ELE GOSTA! 🐎");
       player.play("teste manual", { useTestSound: true });
     }),
+    vscode.commands.registerCommand("cavaloSound.toggleEnabled", async () => {
+      const cfg = vscode.workspace.getConfiguration("cavaloSound");
+      const current = cfg.get("enabled", true);
+      await cfg.update("enabled", !current, vscode.ConfigurationTarget.Global);
+      const msg = !current ? "Cavalo Sound ativado. CAVALO! 🐎" : "Cavalo Sound desativado. Sem sons por enquanto.";
+      vscode.window.showInformationMessage(msg);
+    }),
     vscode.commands.registerCommand("cavaloSound.resetErrorCount", () => {
       diagWatcher.reset();
       vscode.window.showInformationMessage("Cavalo Sound: contador de erros resetado.");
