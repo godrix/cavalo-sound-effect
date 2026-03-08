@@ -5,6 +5,10 @@
   "version": "1.0.0",
   "publisher": "Godrix",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/godrix/cavalo-sound-effect"
+  },
   "icon": "logo.png",
   "engines": {
     "vscode": "^1.93.0"
@@ -95,7 +99,8 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
