@@ -9,6 +9,10 @@
     "type": "git",
     "url": "https://github.com/godrix/cavalo-sound-effect"
   },
+  "bugs": {
+    "url": "https://github.com/godrix/cavalo-sound-effectissues"
+  },
+  "homepage": "https://github.com/godrix/cavalo-sound-effect#readme",
   "icon": "logo.png",
   "engines": {
     "vscode": "^1.93.0"
